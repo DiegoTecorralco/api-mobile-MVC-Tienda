@@ -50,7 +50,7 @@ productosController.getOne = (req, res) => {
 productosController.insert=(req,res)=>{
     productosDAO.insert(req.body)
     .then((reponse)=>{
-       /* res.json({
+       /*res.json({
             data:{ message: "producto saved"},
             producto: response
         })*/

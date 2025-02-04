@@ -7,15 +7,15 @@ productosDAO.getAll=async()=>{
 };
 
 productosDAO.getOne=async(producto_id)=>{
-    return await producto.findOne({producto_id:producto_id}); //   
+    return await producto.findOne({producto_id:producto_id}); 
 }
 productosDAO.insert=async(producto)=>{
-    return await producto.create(producto); //   
+    return await producto.create(producto); 
 }
-productosDAO.updateOne = async (producto_id, Student) => {
+productosDAO.updateOne = async (producto_id, producto) => {
     return await producto.findOneAndUpdate({ producto_id: producto_id }, producto);
   };
   productosDAO.deleteOne = async (producto_id) => {
-    return await producto.findOneAndDelete({ producto_id: student_id });
+    return await producto.findOneAndDelete({ producto_id: producto_id });
   };
 export default productosDAO;

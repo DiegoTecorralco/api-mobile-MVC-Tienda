@@ -16,23 +16,23 @@
             <a href="#" data-icon="gear" class="ui-btn-right">Opciones</a>
             <div data-role="navbar">
             </div>
-            <h1>Agrega a un Producto</h1>  
+            <h1>Agrega un Producto</h1>  
         </div> 
         <div role="content" class="ui-content"> 
             <form action="/api/productos/insert" method="POST">  
                 <label for="txtProductoID">ProductoID:</label>
-                <input type="number" name="producto_id" id="txtProductoID" placeholder="Ingresa la matrícula aquí" required>
+                <input type="number" name="producto_id" id="txtProductoID" placeholder="Ingresa la ID del producto aquí" required>
                 <label for="txtName">Nombre:</label>
-                <input type="text" name="nombre" id="txtName" placeholder="ingresa el nombre aquí" required>
+                <input type="text" name="nombre" id="txtName" placeholder="ingresa el nombre del producto aquí" required>
                 <label for="txtStock">stock:</label>
-                <input type="number" name="stock" id="txtStock" placeholder="Ingresa el grado aquí" required>
+                <input type="number" name="stock" id="txtStock" placeholder="Ingresa el stock aquí" required>
                 <label for="txtGroup">precio:</label>
-                <input type="text" name="precio" id="txtPrecio" placeholder="Ingresa el grupo aquí" required>
+                <input type="number" name="precio" id="txtPrecio" placeholder="Ingresa el precio del producto aquí" required>
                 <button class="ui-btn ui-btn-inline">Guardar</button>
             </form>
             
-            <ul data-role="listview" data-filter="true" data-filter-placeholder="Buscar estudiantes" data-inset="true">
-                <!--vamos a incrustar JavaScript a HTML con ejs para mandar a traer a los estudiantes en un forEach y todo lo que sea en javaScript va a ser dentro de <% %> -->
+            <ul data-role="listview" data-filter="true" data-filter-placeholder="Buscar Productos" data-inset="true">
+                <!--vamos a incrustar JavaScript a HTML con ejs para mandar a traer a los Productos en un forEach y todo lo que sea en javaScript va a ser dentro de <% %> -->
                 <% productos.forEach((producto)=>{ %>
                     <div data-role="collapsible" data-content-theme="false">
                     <h4><%= producto.nombre%></h4>

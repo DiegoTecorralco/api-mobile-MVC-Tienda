@@ -1,1 +1,47 @@
-1111
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>Control de Productos</title>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header"  style="overflow:hidden;">
+            <h1>Control de Productos</h1>
+            <a href="#" data-icon="gear" class="ui-btn-right">Opciones</a>
+            <div data-role="navbar">
+            </div>
+            <h1>Actualiza un Producto</h1>  
+        </div> 
+        <div role="content" class="ui-content"> 
+            <form action="/api/productos/updateOne" method="POST">  
+                <label for="txtProductoID">ProductoID:</label>
+                <input type="number" name="producto_id" id="txtProductoID" placeholder="Ingresa la ID del producto aquí" >
+                <label for="txtName">Nombre:</label>
+                <input type="text" name="nombre" id="txtName" placeholder="ingresa el nombre del producto aquí" >
+                <label for="txtStock">stock:</label>
+                <input type="number" name="stock" id="txtStock" placeholder="Ingresa el stock aquí" >
+                <label for="txtGroup">precio:</label>
+                <input type="number" name="precio" id="txtPrecio" placeholder="Ingresa el precio del producto aquí"  >
+                <button class="ui-btn ui-btn-inline">Guardar</button>
+            </form>
+        </div>
+        <div data-role="footer" style="overflow:hidden;">
+            <h4 style="text-align: center;">Redes Sociales</h4>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" data-icon="user">Facebook</a></li>
+                    <li><a href="#" data-icon="heart">Instagram</a></li>
+                    <li><a href="#" data-icon="mail">Gmail</a></li>
+                </ul>
+            </div>
+            <p style="text-align:center;">©Copyright Diego Tecorralco</p>
+        </div>
+    </div>
+</body>
+</html>
